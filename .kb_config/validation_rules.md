@@ -10,7 +10,7 @@ These rules ensure data integrity and consistency across all pages.
 
 ## 2. Port and Network Consistency
 
-- [ ] All ports mentioned in service pages must exist in `02_Infrastructure/network/firewall-rules.md`
+- [ ] All ports mentioned in service pages must exist in `Инфраструктура/network/firewall-rules.md`
 - [ ] Port numbers must be valid (1-65535)
 - [ ] CIDR notation must be valid (e.g., `192.168.1.0/24`)
 - [ ] No port conflicts on same server (e.g., two services can't use port 1433)
@@ -24,7 +24,7 @@ These rules ensure data integrity and consistency across all pages.
 
 ## 4. Server Inventory
 
-- [ ] Every mentioned server must have a corresponding page in `02_Infrastructure/servers/`
+- [ ] Every mentioned server must have a corresponding page in `Инфраструктура/servers/`
 - [ ] Servers must have: hostname, primary IP, OS, contact
 - [ ] No duplicate hostnames or primary IPs
 
@@ -79,13 +79,13 @@ When checking a page, run through this checklist:
 
 ```bash
 # Check for broken references
-grep -r "\[TODO\]" 02_Infrastructure/ 03_Services/
+grep -r "\[TODO\]" Инфраструктура/ Сервисы/
 
 # Check for plaintext passwords
 grep -r "password.*=" docs/ --exclude=.kb_config
 
 # Check port uniqueness
-grep -r "port:" 03_Services/ | sort | uniq -d
+grep -r "port:" Сервисы/ | sort | uniq -d
 ```
 
 ---
@@ -108,9 +108,9 @@ grep -r "port:" 03_Services/ | sort | uniq -d
 All errors go to `.kb_logs/errors.log`:
 
 ```log
-[2026-04-22T14:36:00Z] VALIDATION_ERROR | file: 03_Services/1c/cluster.md
+[2026-04-22T14:36:00Z] VALIDATION_ERROR | file: Сервисы/1c/cluster.md
   rule: "port_must_be_defined_in_firewall"
-  details: "Port 1545 referenced but not found in 02_Infrastructure/network/firewall-rules.md"
+  details: "Port 1545 referenced but not found in Инфраструктура/network/firewall-rules.md"
   severity: HIGH
   resolution: "Added TODO marker, requested user confirmation"
   status: pending

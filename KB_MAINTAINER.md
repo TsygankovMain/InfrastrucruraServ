@@ -49,13 +49,13 @@ core_principles:
 │   ├── changes.log                    # Хронология всех изменений
 │   ├── questions.log                  # История заданных уточнений
 │   └── errors.log                     # Ошибки валидации/генерации
-├── 01_Overview/
+├── Обзор/
 │   ├── index.md                       # Навигация по разделу
 │   ├── architecture.md                # Высокоуровневая схема
 │   ├── network-map.md                 # Карта сети (Mermaid)
 │   ├── data-flow.md                   # Потоки данных между сервисами
 │   └── glossary.md                    # Термины и аббревиатуры
-├── 02_Infrastructure/
+├── Инфраструктура/
 │   ├── servers/
 │   │   ├── template-server.md         # ШАБЛОН: описание сервера
 │   │   └── ...                        # Конкретные сервера (создаются по мере поступления данных)
@@ -65,16 +65,16 @@ core_principles:
 │   └── storage/
 │       ├── template-storage.md
 │       └── backup-policy.md
-├── 03_Services/
+├── Сервисы/
 │   ├── template-service.md            # ШАБЛОН: описание сервиса
 │   ├── 1c/
 │   ├── mssql/
 │   └── monitoring/
-├── 04_Access/
+├── Доступ/
 │   ├── users.md
 │   ├── roles.md
 │   └── service-accounts.md
-├── 05_Runbooks/
+├── Ранбуки/
 │   ├── template-runbook.md
 │   └── ...                            # Пошаговые инструкции
 └── .gitignore                         # Исключить .kb_logs/ из коммитов (опционально)
@@ -111,7 +111,7 @@ flowchart TD
 
 ### Пример формата вопроса:
 ```markdown
-> 🔍 **Требуется уточнение для:** `02_Infrastructure/servers/server-1-1c.md`
+> 🔍 **Требуется уточнение для:** `Инфраструктура/servers/server-1-1c.md`
 
 | Поле | Текущее значение | Что нужно уточнить |
 |------|-----------------|-------------------|
@@ -133,7 +133,7 @@ flowchart TD
 ## ✏️ Протокол обновления документации
 
 ### Шаг 1: Генерация контента
-Используй шаблоны из `03_Services/template-service.md`:
+Используй шаблоны из `Сервисы/template-service.md`:
 
 ```markdown
 ---
@@ -173,14 +173,14 @@ ai_notes: "{{Кратко: что изменено и на основании ч
 Перед сохранением проверь:
 - [ ] YAML frontmatter соответствует `schema.yaml`
 - [ ] Все ссылки на другие страницы существуют (или помечены `[TODO]`)
-- [ ] Порты/адреса согласованы с `01_Overview/network-map.md`
+- [ ] Порты/адреса согласованы с `Обзор/network-map.md`
 - [ ] Нет противоречий с уже задокументированными данными
 
 ### Шаг 3: Логирование
 Запиши в `.kb_logs/changes.log` в формате:
 
 ```log
-[2026-04-22T14:35:00Z] UPDATE | file: 02_Infrastructure/servers/server-1-1c.md
+[2026-04-22T14:35:00Z] UPDATE | file: Инфраструктура/servers/server-1-1c.md
   - changed: services.1c.version: "8.3.x" → "8.3.25.1234"
   - added: network.ports.ras.internal: true
   - reason: User clarification via chat #42
@@ -217,7 +217,7 @@ ai_notes: "{{Кратко: что изменено и на основании ч
 # ACTION: CREATE | UPDATE | DELETE | ROLLBACK
 # Каждая запись заканчивается status: confirmed|pending|rejected
 
-[2026-04-22T14:35:00Z] UPDATE | file: 02_Infrastructure/servers/server-1-1c.md
+[2026-04-22T14:35:00Z] UPDATE | file: Инфраструктура/servers/server-1-1c.md
   fields_changed:
     - path: services.1c.version
       from: "8.3.x"
@@ -234,7 +234,7 @@ ai_notes: "{{Кратко: что изменено и на основании ч
 ### `.kb_logs/questions.log`
 ```log
 [2026-04-22T14:30:00Z] QUESTION_SENT | session: 42
-  target_file: 02_Infrastructure/servers/server-1-1c.md
+  target_file: Инфраструктура/servers/server-1-1c.md
   questions_count: 3
   topics: ["version", "network", "backup"]
   status: awaiting_response
@@ -247,9 +247,9 @@ ai_notes: "{{Кратко: что изменено и на основании ч
 
 ### `.kb_logs/errors.log`
 ```log
-[2026-04-22T14:36:00Z] VALIDATION_ERROR | file: 03_Services/1c/cluster.md
+[2026-04-22T14:36:00Z] VALIDATION_ERROR | file: Сервисы/1c/cluster.md
   rule: "port_must_be_defined_in_firewall"
-  details: "Port 1545 referenced but not found in 02_Infrastructure/network/firewall-rules.md"
+  details: "Port 1545 referenced but not found in Инфраструктура/network/firewall-rules.md"
   resolution: "Added TODO marker, requested user confirmation"
 ---
 ```
@@ -295,9 +295,9 @@ entities:
       - encrypted: boolean
 
 validation_rules:
-  - "Every Service.port must be documented in 02_Infrastructure/network/firewall-rules.md"
-  - "If Service.dependencies includes X, then X must have a page in 03_Services/"
-  - "Server with role 'DB' must have backup-policy linked in 02_Infrastructure/storage/"
+  - "Every Service.port must be documented in Инфраструктура/network/firewall-rules.md"
+  - "If Service.dependencies includes X, then X must have a page in Сервисы/"
+  - "Server with role 'DB' must have backup-policy linked in Инфраструктура/storage/"
 ```
 
 ---

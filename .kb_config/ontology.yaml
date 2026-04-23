@@ -104,8 +104,8 @@ entities:
       - escalates_to: string (team/contact)
 
 validation_rules:
-  - "Every Service.port must be documented in 02_Infrastructure/network/firewall-rules.md"
-  - "If Service.dependencies contains X, then X must have a page in 03_Services/"
+  - "Every Service.port must be documented in Инфраструктура/network/firewall-rules.md"
+  - "If Service.dependencies contains X, then X must have a page in Сервисы/"
   - "Server with role containing 'DB' must have backup_policy referenced"
   - "Every Server must have exactly one primary IP"
   - "Port numbers must not conflict within same server"

@@ -81,6 +81,6 @@ example_frontmatter: |
   updated_by: "AI-Maintainer"
   owner: "@DevOps Team"
   tags: [1c, application-server, production, mssql-dependent]
-  related: ["02_Infrastructure/servers/mssql-primary.md", "03_Services/1c/cluster.md"]
+  related: ["Инфраструктура/servers/mssql-primary.md", "Сервисы/1c/cluster.md"]
   ai_notes: "Updated version and ports based on user clarification #42"
   ---
