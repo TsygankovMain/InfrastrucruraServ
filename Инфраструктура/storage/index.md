@@ -1,6 +1,5 @@
 ---
 title: "Хранилище и бэкапы"
-slug: "storage-index"
 status: "published"
 last_updated: "2026-04-23T00:00:00Z"
 updated_by: "AI-Maintainer"
