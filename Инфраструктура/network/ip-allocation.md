@@ -1,5 +1,5 @@
 ---
-title: "IP распределение и VLAN конфигурация"
+title: "Распределение IP и конфигурация VLAN"
 slug: "ip-allocation"
 status: "draft"
 last_updated: "2026-04-23T00:00:00Z"
@@ -10,7 +10,7 @@ ai_notes: "[NEEDS_DATA] Требуется актуальная информац
 order: 1
 ---
 
-# IP распределение
+# Распределение IP и конфигурация VLAN
 
 ## VLAN архитектура
 

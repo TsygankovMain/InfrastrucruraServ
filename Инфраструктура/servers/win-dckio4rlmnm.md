@@ -1,5 +1,5 @@
 ---
-title: "WIN-DCKIO4RLMNM: MSSQL 2019 Database Server"
+title: "WIN-DCKIO4RLMNM: Сервер MSSQL 2019"
 slug: "win-dckio4rlmnm-sql-server"
 status: "published"
 last_updated: "2026-04-22T13:00:00Z"
@@ -11,7 +11,7 @@ ai_notes: "Created from AIDA64 system report. Hosts MSSQL Server 2019 for 1C Ent
 order: 2
 ---
 
-# WIN-DCKIO4RLMNM: MSSQL 2019 Database Server
+# WIN-DCKIO4RLMNM: Сервер MSSQL 2019
 
 **Production SQL Server hosting databases for 1C Enterprise 8.3 and 8.5 platforms.**
 

@@ -1,5 +1,5 @@
 ---
-title: "Zabbix 7.4: Production Monitoring System"
+title: "Zabbix 7.4: Производственная система мониторинга"
 slug: "zabbix-monitoring-system"
 status: "published"
 last_updated: "2026-04-22T15:46:00Z"
@@ -11,7 +11,7 @@ ai_notes: "Zabbix single-server architecture on Proxmox VM. Monitors PVD-1C (1C)
 order: 1
 ---
 
-# Zabbix 7.4: Production Monitoring System
+# Zabbix 7.4: Производственная система мониторинга
 
 **Централизованная система мониторинга инфраструктуры 1C и SQL на базе Zabbix 7.4.9**
 

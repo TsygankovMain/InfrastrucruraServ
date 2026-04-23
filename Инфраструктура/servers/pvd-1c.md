@@ -1,5 +1,5 @@
 ---
-title: "PVD-1C: 1C Enterprise Application Server"
+title: "PVD-1C: Сервер приложений 1C"
 slug: "pvd-1c-1c-server"
 status: "published"
 last_updated: "2026-04-23T18:45:00Z"
@@ -11,7 +11,7 @@ ai_notes: "Updated from AIDA64 system report and server_reportPVD-1C.txt. Added 
 order: 1
 ---
 
-# PVD-1C: 1C Enterprise Application Server
+# PVD-1C: Сервер приложений 1C
 
 **Production-grade server hosting 1C Enterprise 8.3 and 8.5 platform versions, and Microsoft SQL Server 2025.**
 

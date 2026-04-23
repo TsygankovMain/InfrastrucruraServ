@@ -1,12 +1,12 @@
 ---
-title: "Server Template"
+title: "Шаблон: Документация сервера"
 slug: "template-server"
 status: "draft"
 description: "Template for documenting individual servers"
 order: 99
 ---
 
-# Server Configuration Template
+# Шаблон: Документация сервера
 
 > 📝 **This is a template.** Copy and modify for each new server.
 

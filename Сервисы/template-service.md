@@ -1,12 +1,12 @@
 ---
-title: "Service Template"
+title: "Шаблон: Документация сервиса"
 slug: "template-service"
 status: "draft"
 description: "Template for documenting services/applications"
 order: 99
 ---
 
-# Service Configuration Template
+# Шаблон: Документация сервиса
 
 > 📝 **This is a template.** Copy and modify for each service.
 

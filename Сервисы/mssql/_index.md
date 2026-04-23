@@ -8,7 +8,7 @@ related: ["Сервисы/mssql/server-instances.md", "Сервисы/mssql/data
 order: 2
 ---
 
-# 🗄️ MSSQL Services
+# MS SQL Server
 
 Документация по Microsoft SQL Server инстансам, базам данных и конфигурации.
 

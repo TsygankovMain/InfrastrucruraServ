@@ -1,5 +1,5 @@
 ---
-title: "1C Enterprise"
+title: "1C Предприятие"
 status: "published"
 last_updated: "2026-04-23T00:00:00Z"
 updated_by: "AI-Maintainer"
@@ -8,7 +8,7 @@ related: ["Сервисы/1c/platform-versions.md", "Сервисы/1c/applicati
 order: 1
 ---
 
-# 🏢 1C Enterprise Services
+# 1C Предприятие
 
 Документация по 1C Enterprise платформе, версиям, серверам приложений и конфигурации.
 

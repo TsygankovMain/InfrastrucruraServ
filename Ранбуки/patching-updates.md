@@ -11,7 +11,7 @@ ai_notes: "[NEEDS_DATA] Требуется расписание patching для 
 order: 2
 ---
 
-# Обновления и патчинг (Patching)
+# Обновления и патчинг
 
 ## Стратегия patching
 

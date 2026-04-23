@@ -1,5 +1,5 @@
 ---
-title: "MSSQL High Availability и репликация"
+title: "MSSQL: Высокая доступность и репликация"
 slug: "mssql-ha-replication"
 status: "draft"
 last_updated: "2026-04-23T00:00:00Z"
@@ -11,7 +11,7 @@ ai_notes: "[NEEDS_DEFINITION] Требуется информация о HA ст
 order: 3
 ---
 
-# MSSQL High Availability
+# MSSQL: Высокая доступность и репликация
 
 ## Текущая конфигурация HA
 
