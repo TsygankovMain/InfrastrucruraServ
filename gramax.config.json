@@ -1,0 +1,19 @@
+{
+  "catalog": {
+    "name": "1C + MSSQL Infrastructure KB",
+    "description": "Knowledge Base для документирования архитектуры серверной инфраструктуры 1C Enterprise и MSSQL",
+    "language": "ru",
+    "logo": null,
+    "favicon": null
+  },
+  "git": {
+    "enable": true,
+    "remote": "origin",
+    "branch": "main"
+  },
+  "ui": {
+    "theme": "light",
+    "logo_dark_mode": false
+  },
+  "version": "1.0"
+}

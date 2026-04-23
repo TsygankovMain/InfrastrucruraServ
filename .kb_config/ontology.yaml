@@ -1,0 +1,119 @@
+# Ontology: Entities and Relations
+# Defines semantic structure of the knowledge base
+
+entities:
+  Server:
+    description: "Physical or virtual server"
+    attributes:
+      - name: string (required, e.g. PROD-APP-01)
+      - hostname: string (required)
+      - ip_primary: string (required, IPv4)
+      - ip_secondary: string (optional, list)
+      - os: enum[WindowsServer2019, WindowsServer2022, AlmaLinux9, CentOS7, Ubuntu20.04]
+      - roles: list[Service] (what runs on this server)
+      - cpu_cores: integer
+      - memory_gb: integer
+      - disk_storage: string (e.g. "500GB SSD")
+      - contact: string (responsible engineer)
+      - created_date: ISO8601
+      - last_updated: ISO8601
+    relations:
+      - hosts: Service (1..*)
+      - connected_to: NetworkSegment
+      - monitored_by: MonitoringSystem
+      - has_backups_in: StorageLocation
+    examples:
+      - PROD-DB-01 (primary MSSQL server)
+      - PROD-APP-01 (1C application server)
+      - PROD-IIS-01 (web server for portals)
+
+  Service:
+    description: "Software service/application running on server(s)"
+    attributes:
+      - name: string (required, e.g. 1C Enterprise 8.3)
+      - type: enum[1CServer, 1CRAS, MSSQL, IIS, Zabbix, Nginx, Docker, HAProxy, etc.]
+      - version: string (e.g. 8.3.25.1234)
+      - port: list[PortConfig] (required)
+      - dependencies: list[Service] (what this service needs to function)
+      - admin_credentials_vault: string (reference to secure storage, not inline)
+      - data_location: string (where data/databases are stored)
+    relations:
+      - runs_on: Server (1..*)
+      - communicates_with: Service
+      - exposed_via: NetworkEndpoint
+      - backed_up_by: BackupPolicy
+      - monitored_by: MonitoringAlert
+    examples:
+      - 1C Enterprise Cluster (multiple servers)
+      - MSSQL Server 2019 (database engine)
+      - IIS with Bitrix24 portal
+
+  PortConfig:
+    description: "Port/protocol configuration for a service"
+    attributes:
+      - port: integer (1-65535, required)
+      - protocol: enum[TCP, UDP, TLS/SSL, HTTP, HTTPS]
+      - direction: enum[inbound, outbound, bidirectional]
+      - source_restriction: string (CIDR like 192.168.1.0/24 or "any")
+      - destination: string (which server/service this connects to)
+      - encrypted: boolean
+      - purpose: string (e.g. "RAS protocol", "DB replication", "Web UI")
+    examples:
+      - port: 1541, protocol: TCP, direction: inbound (1C RAS)
+      - port: 1433, protocol: TCP (MSSQL)
+      - port: 443, protocol: HTTPS (web portal)
+
+  NetworkSegment:
+    description: "VLAN or subnet"
+    attributes:
+      - name: string (e.g. PROD_APP_VLAN)
+      - cidr: string (required, e.g. 192.168.10.0/24)
+      - gateway: string
+      - dns_servers: list[string]
+      - description: string
+    relations:
+      - contains: Server (1..*)
+      - firewall_rules_to: NetworkSegment
+
+  BackupPolicy:
+    description: "Backup strategy for server/service"
+    attributes:
+      - frequency: enum[hourly, daily, weekly, monthly]
+      - retention_days: integer
+      - method: enum[FullCopy, Incremental, Differential, Snapshot, SQL_Agent]
+      - tool: string (e.g. Veeam, SQL Server Agent, rsync)
+      - destination: StorageLocation
+      - tested_recovery: boolean
+      - last_test_date: ISO8601
+    relations:
+      - protects: Server
+      - protects: Service
+      - stored_in: StorageLocation
+
+  MonitoringAlert:
+    description: "Alert rule in monitoring system"
+    attributes:
+      - metric_name: string (e.g. CPU%, Memory%, Port_Open)
+      - threshold_value: number
+      - threshold_condition: enum[>, <, >=, <=, ==]
+      - check_interval_seconds: integer
+      - notification_channel: enum[Email, Slack, PagerDuty, SMS]
+    relations:
+      - monitors: Server
+      - monitors: Service
+      - escalates_to: string (team/contact)
+
+validation_rules:
+  - "Every Service.port must be documented in 02_Infrastructure/network/firewall-rules.md"
+  - "If Service.dependencies contains X, then X must have a page in 03_Services/"
+  - "Server with role containing 'DB' must have backup_policy referenced"
+  - "Every Server must have exactly one primary IP"
+  - "Port numbers must not conflict within same server"
+  - "All referenced servers/services must have dedicated pages"
+  - "No plaintext passwords/secrets (use {{VAULT_REFERENCE}})"
+
+semantic_links:
+  - "Server → (hosts) → Service → (depends_on) → Service"
+  - "Server → (in) → NetworkSegment → (connected_to) → NetworkSegment"
+  - "Service → (monitored_by) → MonitoringAlert → (escalates_to) → Contact"
+  - "Server → (protected_by) → BackupPolicy → (stores_in) → StorageLocation"

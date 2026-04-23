@@ -1,0 +1,12 @@
+{
+  "name": "1c-mssql-infra-kb",
+  "version": "1.0.0",
+  "description": "Knowledge Base для инфраструктуры 1C Enterprise и MSSQL",
+  "keywords": ["1c", "mssql", "infrastructure", "knowledge-base", "wiki"],
+  "author": "Infrastructure Team",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "gramax-cli build --source . --destination ./output"
+  }
+}

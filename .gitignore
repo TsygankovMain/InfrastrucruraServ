@@ -1,0 +1,28 @@
+# Knowledge Base Git Ignore Rules
+
+# Hide sensitive logs (keep locally, don't commit)
+.kb_logs/
+
+# IDE and editor temp files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Backup and temp files
+*.bak
+*.tmp
+*.temp
+*.backup
+~*
+
+# Do NOT ignore:
+# - .kb_config/ (schema and templates should be committed)
+# - Actual KB pages (all .md files except templates)
+# - README.md and KB_MAINTAINER.md

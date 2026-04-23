@@ -1,0 +1,83 @@
+# Clarification Question Templates
+# Use these templates when user data is incomplete
+
+templates:
+  server_info:
+    name: "Basic Server Information"
+    questions:
+      - "Точный hostname сервера (FQDN)?"
+      - "Основной IP-адрес?"
+      - "Операционная система и версия (e.g., Windows Server 2022, AlmaLinux 9)?"
+      - "Количество CPU ядер и объём памяти (RAM)?"
+      - "Ответственный инженер/контакт?"
+    optional:
+      - "Вторичный IP-адрес (если есть)?"
+      - "Объём дискового пространства?"
+      - "Дата создания/ввода в эксплуатацию?"
+
+  service_info:
+    name: "Service/Application Configuration"
+    questions:
+      - "Точная версия приложения (например, 1C 8.3.25.1234)?"
+      - "На каких серверах это работает?"
+      - "Какие порты использует (укажите направление: inbound/outbound)?"
+      - "От каких других сервисов/баз данных зависит?"
+      - "Какой контроль доступа (ACL/firewall rules)?"
+    optional:
+      - "Как создаются бэкапы (метод, частота, хранилище)?"
+      - "Какие метрики мониторятся?"
+      - "Где хранятся логи?"
+
+  network_config:
+    name: "Network and Firewall Rules"
+    questions:
+      - "Какой протокол (TCP/UDP/TLS)?"
+      - "Откуда идёт трафик (CIDR, диапазон IP)?"
+      - "Куда идёт трафик (целевой хост/сервис)?"
+      - "Шифрование трафика (TLS/SSL)?"
+      - "Постоянное правило или временное?"
+
+  backup_info:
+    name: "Backup and Recovery"
+    questions:
+      - "Как часто создаются бэкапы (ежедневно/еженедельно/по требованию)?"
+      - "Какой метод (Full/Incremental/Differential/Snapshot)?"
+      - "Какой инструмент (SQL Agent/Veeam/rsync/другое)?"
+      - "Где хранятся бэкапы (локальное/сетевое хранилище)?"
+      - "Как долго хранятся (retention period)?"
+      - "Когда последний успешный тест восстановления?"
+
+  monitoring_info:
+    name: "Monitoring and Alerts"
+    questions:
+      - "Какие ключевые метрики нужно мониторить?"
+      - "Какие пороги срабатывания алертов (threshold values)?"
+      - "Как уведомляются (Email/Slack/PagerDuty)?"
+      - "Кого уведомлять при критических алертах?"
+
+  access_control:
+    name: "Users and Permissions"
+    questions:
+      - "Какие учётные записи используются (service accounts)?"
+      - "Какие permissions/roles нужны?"
+      - "Кто имеет доступ к управлению (admins)?"
+    note: "Пароли/ключи НЕ записываем в КБ — используем {{PLACEHOLDER}}"
+
+question_rules:
+  max_per_round: 5
+  format: "Структурированная таблица с контекстом"
+  if_unknown: "Напиши 'уточню позже' — пометим как [PENDING]"
+  follow_up: "После ответа коротко резюмируем, что будет обновлено"
+
+example_output: |
+  > 🔍 **Требуется уточнение для:** `02_Infrastructure/servers/server-prod-app-01.md`
+
+  | Поле | Текущее значение | Вопрос |
+  |------|-----------------|--------|
+  | `os.version` | не указано | Какая версия Windows Server (2019/2022)? Какой CU (cumulative update)? |
+  | `services.1c.version` | `8.3.x` | Укажите точную версию платформы (например, 8.3.25.1234) |
+  | `network.ports.ras.firewall` | ❓ | RAS-порт 1541 доступен для входящих подключений или только внутри сети? |
+  | `backup.method` | не определено | Как создаются бэкапы (SQL Agent, Veeam, скрипт)? Как часто? |
+  | `backup.retention_days` | не определено | Как долго хранятся бэкапы? |
+
+  💡 **После ответов на эти вопросы** я обновлю страницу и пересчитаю все зависимые ссылки.

@@ -1,0 +1,86 @@
+# JSON Schema for Knowledge Base Pages
+# All markdown files must comply with this frontmatter structure
+
+schema_version: "1.0"
+description: "YAML frontmatter validation schema for KB pages"
+
+required_fields:
+  - title
+  - slug
+  - status
+
+optional_fields:
+  - last_updated
+  - updated_by
+  - owner
+  - tags
+  - related
+  - ai_notes
+  - deprecated
+
+field_definitions:
+  title:
+    type: string
+    description: "Page title (max 100 chars)"
+    min_length: 3
+    max_length: 100
+
+  slug:
+    type: string
+    description: "URL-friendly identifier (lowercase, hyphens only)"
+    pattern: "^[a-z0-9]+(-[a-z0-9]+)*$"
+
+  status:
+    type: enum
+    values: [draft, review, published, deprecated]
+    description: "Current page status"
+
+  last_updated:
+    type: string
+    format: "ISO 8601 (YYYY-MM-DDTHH:MM:SSZ)"
+
+  updated_by:
+    type: string
+    description: "Who made last update (AI-Maintainer or user name)"
+
+  owner:
+    type: string
+    description: "Responsible person (@mention or name)"
+
+  tags:
+    type: array
+    items: string
+    description: "Searchable tags"
+
+  related:
+    type: array
+    items: string
+    description: "Relative paths to related pages"
+
+  ai_notes:
+    type: string
+    description: "AI-Maintainer notes about changes/reasons"
+
+  deprecated:
+    type: boolean
+    description: "Mark page as deprecated (use with status: deprecated)"
+
+validation_rules:
+  - "If status=deprecated, must have deprecation_note"
+  - "related[] paths must exist or be marked [TODO]"
+  - "No passwords, tokens, or secrets in raw form (use {{PLACEHOLDER}})"
+  - "Port numbers must be 1-65535"
+  - "CIDR notation must be valid (X.X.X.X/Y)"
+
+example_frontmatter: |
+  ---
+  title: "1C Application Server - PROD-APP-01"
+  slug: "1c-prod-app-01"
+  status: "published"
+  last_updated: "2026-04-22T14:30:00Z"
+  updated_by: "AI-Maintainer"
+  owner: "@DevOps Team"
+  tags: [1c, application-server, production, mssql-dependent]
+  related: ["02_Infrastructure/servers/mssql-primary.md", "03_Services/1c/cluster.md"]
+  ai_notes: "Updated version and ports based on user clarification #42"
+  ---

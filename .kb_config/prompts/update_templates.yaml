@@ -1,0 +1,45 @@
+# Update Confirmation Template
+# Used to show user the changes before saving
+
+confirmation_template: |
+  > ✅ **Готово к сохранению:** `{{FILE_PATH}}`
+
+  **Изменения:**
+  ```diff
+  {{DIFF_BLOCK}}
+  ```
+
+  **Затронутые связи:**
+  - Referenced by: {{BACK_REFERENCES}}
+  - References: {{FORWARD_REFERENCES}}
+
+  **Статус валидации:** ✓ Passed all checks
+
+  **Сохранить?** (Да / Нет / Править)
+
+# File creation template
+file_creation_template: |
+  > 📝 **Новая страница:** `{{FILE_PATH}}`
+
+  {{CONTENT_PREVIEW}}
+
+  **Сохранить?** (Да / Нет)
+
+# Conflict resolution template
+conflict_template: |
+  ⚠️ **Конфликт данных:** `{{FILE_PATH}}`
+
+  **Что было:**
+  ```yaml
+  {{OLD_VALUE}}
+  ```
+
+  **Что предлагается:**
+  ```yaml
+  {{NEW_VALUE}}
+  ```
+
+  **Причина конфликта:**
+  {{CONFLICT_REASON}}
+
+  **Как разрешить?** (Использовать новое / Сохранить старое / Обсудить)
