@@ -1,11 +1,12 @@
 ---
-title: "MSSQL Services"
+title: "MS SQL Server"
 slug: "mssql-index"
 status: "published"
 last_updated: "2026-04-23T00:00:00Z"
 updated_by: "AI-Maintainer"
 tags: [mssql, database, services]
 related: ["Сервисы/mssql/server-instances.md", "Сервисы/mssql/databases.md"]
+order: 2
 ---
 
 # 🗄️ MSSQL Services

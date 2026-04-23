@@ -8,6 +8,7 @@ owner: "@1C Admin Team"
 tags: [1c, platform, versions, configuration]
 related: ["Сервисы/1c/application-servers.md"]
 ai_notes: "[NEEDS_DATA] Требуется информация об установленных версиях 1C"
+order: 1
 ---
 
 # 1C Enterprise платформа

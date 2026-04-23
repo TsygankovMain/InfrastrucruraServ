@@ -8,6 +8,7 @@ owner: "@DevOps Team"
 tags: [service-accounts, automation, security]
 related: ["Доступ/rbac.md", "Доступ/users-roles.md"]
 ai_notes: "[NEEDS_DATA] Требуется список сервис-акаунтов и их назначение"
+order: 4
 ---
 
 # Сервис-акаунты

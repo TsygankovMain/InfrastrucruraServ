@@ -5,6 +5,7 @@ status: "published"
 last_updated: "2026-04-23T00:00:00Z"
 updated_by: "AI-Maintainer"
 tags: [glossary, terminology, abbreviations]
+order: 4
 ---
 
 # 📖 Глоссарий

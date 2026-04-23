@@ -8,6 +8,7 @@ owner: "Mainsoft Tsyganov ES"
 tags: [1c-enterprise, application-server, production, windows-server-2025, xeon-gold, mssql-2025]
 related: ["Инфраструктура/servers/win-dckio4rlmnm.md", "Сервисы/1c/platform-8.3.md", "Сервисы/1c/platform-8.5.md"]
 ai_notes: "Updated from AIDA64 system report and server_reportPVD-1C.txt. Added specific 1C versions, ports, users, and Zabbix."
+order: 1
 ---
 
 # PVD-1C: 1C Enterprise Application Server

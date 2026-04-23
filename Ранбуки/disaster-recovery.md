@@ -8,6 +8,7 @@ owner: "@DBA Team"
 tags: [runbook, disaster-recovery, backup, restore, rto-rpo]
 related: ["Инфраструктура/storage/backup-policy.md", "Инфраструктура/storage/san-config.md"]
 ai_notes: "[NEEDS_VERIFICATION] DR процедура требует уточнения RTO/RPO требований"
+order: 4
 ---
 
 # Аварийное восстановление (Disaster Recovery)

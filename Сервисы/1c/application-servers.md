@@ -8,6 +8,7 @@ owner: "@1C Admin Team"
 tags: [1c, app-servers, cluster, load-balancing]
 related: ["Сервисы/1c/platform-versions.md", "Инфраструктура/servers/pvd-1c.md"]
 ai_notes: "[NEEDS_DATA] Требуется информация о серверах приложений 1C"
+order: 2
 ---
 
 # 1C Application Servers

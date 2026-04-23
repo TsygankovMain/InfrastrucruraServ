@@ -8,6 +8,7 @@ owner: "@Security Team"
 tags: [permissions, matrix, rbac, access-control]
 related: ["Доступ/rbac.md", "Доступ/users-roles.md"]
 ai_notes: "[NEEDS_VERIFICATION] Матрица требует уточнения текущих разрешений"
+order: 3
 ---
 
 # Матрица разрешений

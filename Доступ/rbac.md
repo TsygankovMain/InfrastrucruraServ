@@ -8,6 +8,7 @@ owner: "@Security Team"
 tags: [rbac, security, access-control, policy]
 related: ["Доступ/permissions-matrix.md", "Доступ/users-roles.md"]
 ai_notes: "[NEEDS_DEFINITION] Требуется уточнить RBAC модель для организации"
+order: 2
 ---
 
 # RBAC политика

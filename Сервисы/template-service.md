@@ -3,6 +3,7 @@ title: "Service Template"
 slug: "template-service"
 status: "draft"
 description: "Template for documenting services/applications"
+order: 99
 ---
 
 # Service Configuration Template

@@ -8,6 +8,7 @@ owner: "Mainsoft Tsyganov ES"
 tags: [mssql-2019, database-server, production, windows-server-2016, xeon-e5]
 related: ["Инфраструктура/servers/pvd-1c.md", "Сервисы/mssql/server-2019.md"]
 ai_notes: "Created from AIDA64 system report. Hosts MSSQL Server 2019 for 1C Enterprise applications (8.3 and 8.5). Disk allocation strategy [PENDING]."
+order: 2
 ---
 
 # WIN-DCKIO4RLMNM: MSSQL 2019 Database Server

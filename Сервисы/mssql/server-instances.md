@@ -8,6 +8,7 @@ owner: "@DBA Team"
 tags: [mssql, instances, configuration, sql-server]
 related: ["Сервисы/mssql/databases.md", "Инфраструктура/servers/win-dckio4rlmnm.md"]
 ai_notes: "[NEEDS_DATA] Требуется информация об инстансах MSSQL (версии, параметры)"
+order: 1
 ---
 
 # MSSQL Server инстансы

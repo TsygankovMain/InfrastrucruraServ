@@ -6,6 +6,7 @@ last_updated: "2026-04-23T00:00:00Z"
 updated_by: "AI-Maintainer"
 tags: [architecture, overview, infrastructure, diagram]
 related: ["Обзор/network-map.md", "Обзор/data-flow.md", "Инфраструктура/servers/pvd-1c.md"]
+order: 1
 ---
 
 # 🏗️ Архитектура инфраструктуры

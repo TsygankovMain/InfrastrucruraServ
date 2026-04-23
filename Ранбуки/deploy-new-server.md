@@ -8,6 +8,7 @@ owner: "@DevOps Team"
 tags: [runbook, deployment, server-setup, provisioning]
 related: ["Инфраструктура/servers/template-server.md", "Доступ/users-roles.md"]
 ai_notes: "[NEEDS_VERIFICATION] Процедура требует проверки для вашей инфраструктуры"
+order: 1
 ---
 
 # Развёртывание нового сервера

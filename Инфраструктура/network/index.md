@@ -6,6 +6,7 @@ last_updated: "2026-04-23T00:00:00Z"
 updated_by: "AI-Maintainer"
 tags: [network, infrastructure, configuration]
 related: ["Инфраструктура/network/ip-allocation.md", "Инфраструктура/network/firewall-rules.md"]
+order: 2
 ---
 
 # 🌐 Сетевая конфигурация

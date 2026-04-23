@@ -7,6 +7,7 @@ updated_by: "AI-Maintainer"
 tags: [firewall, security, network-rules, ports]
 related: ["Инфраструктура/network/ip-allocation.md", "Доступ/rbac.md"]
 ai_notes: "[NEEDS_DATA] Требуется документация firewall правил"
+order: 2
 ---
 
 # Firewall правила

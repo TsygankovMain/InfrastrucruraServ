@@ -8,6 +8,7 @@ owner: "@1C Admin Team"
 tags: [1c, web-extensions, integrations, api]
 related: ["Сервисы/1c/application-servers.md"]
 ai_notes: "[NEEDS_DATA] Требуется информация о web-интеграциях и расширениях"
+order: 3
 ---
 
 # 1C Web-расширения и интеграции

@@ -8,6 +8,7 @@ owner: "@DBA Team"
 tags: [backup, disaster-recovery, rto-rpo]
 related: ["Инфраструктура/storage/disaster-recovery.md"]
 ai_notes: "[NEEDS_DATA] Требуется информация о backup-ах и расписании"
+order: 1
 ---
 
 # Политика резервного копирования

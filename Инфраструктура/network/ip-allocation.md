@@ -7,6 +7,7 @@ updated_by: "AI-Maintainer"
 tags: [network, ip, vlan, subnets]
 related: ["Инфраструктура/network/firewall-rules.md", "Обзор/network-map.md"]
 ai_notes: "[NEEDS_DATA] Требуется актуальная информация об IP адресах и VLAN'ах"
+order: 1
 ---
 
 # IP распределение

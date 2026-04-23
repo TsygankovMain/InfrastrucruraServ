@@ -7,6 +7,7 @@ updated_by: "AI-Maintainer"
 tags: [data-flow, architecture, communication]
 related: ["Обзор/architecture.md", "Обзор/network-map.md"]
 ai_notes: "[NEEDS_VERIFICATION] Требуется документация всех потоков данных"
+order: 3
 ---
 
 # 📊 Потоки данных

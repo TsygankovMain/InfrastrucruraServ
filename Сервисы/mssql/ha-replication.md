@@ -8,6 +8,7 @@ owner: "@DBA Team"
 tags: [mssql, ha, replication, failover, disaster-recovery]
 related: ["Сервисы/mssql/server-instances.md", "Инфраструктура/storage/backup-policy.md"]
 ai_notes: "[NEEDS_DEFINITION] Требуется информация о HA стратегии"
+order: 3
 ---
 
 # MSSQL High Availability

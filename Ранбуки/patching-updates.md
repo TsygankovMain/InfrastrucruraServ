@@ -8,6 +8,7 @@ owner: "@DevOps Team"
 tags: [runbook, patching, updates, maintenance, windows-update]
 related: ["Доступ/users-roles.md"]
 ai_notes: "[NEEDS_DATA] Требуется расписание patching для вашей инфраструктуры"
+order: 2
 ---
 
 # Обновления и патчинг (Patching)

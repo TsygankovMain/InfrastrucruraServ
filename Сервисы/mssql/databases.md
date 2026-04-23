@@ -8,6 +8,7 @@ owner: "@DBA Team"
 tags: [mssql, databases, data]
 related: ["Сервисы/mssql/server-instances.md", "Сервисы/mssql/ha-replication.md"]
 ai_notes: "[NEEDS_DATA] Требуется список баз данных и их назначение"
+order: 2
 ---
 
 # MSSQL базы данных

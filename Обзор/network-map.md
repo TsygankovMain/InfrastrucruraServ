@@ -7,6 +7,7 @@ updated_by: "AI-Maintainer"
 tags: [network, topology, diagram, ip-allocation]
 related: ["Обзор/data-flow.md", "Инфраструктура/network/ip-allocation.md"]
 ai_notes: "[NEEDS_DATA] Требуется актуальная сетевая топология и IP адреса"
+order: 2
 ---
 
 # 🗺️ Карта сети

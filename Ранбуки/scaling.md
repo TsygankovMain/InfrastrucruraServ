@@ -8,6 +8,7 @@ owner: "@Infrastructure Team"
 tags: [runbook, scaling, capacity-planning, performance]
 related: ["Инфраструктура/servers/template-server.md"]
 ai_notes: "[NEEDS_DATA] Требуется определить пороги масштабирования (CPU, RAM, Disk %)"
+order: 3
 ---
 
 # Масштабирование и добавление ресурсов

@@ -8,6 +8,7 @@ owner: "@Storage Team"
 tags: [san, storage, disk-arrays, lun]
 related: ["Инфраструктура/storage/backup-policy.md"]
 ai_notes: "[NEEDS_DATA] Требуется информация о SAN и дисковых массивах"
+order: 2
 ---
 
 # SAN конфигурация

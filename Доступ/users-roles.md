@@ -8,6 +8,7 @@ owner: "@DevOps Team"
 tags: [users, roles, authentication, ad]
 related: ["Доступ/rbac.md", "Доступ/permissions-matrix.md"]
 ai_notes: "[NEEDS_DATA] Требуется заполнить данные о пользователях и их ролях. Ожидание уточнения от администратора."
+order: 1
 ---
 
 # Пользователи и роли

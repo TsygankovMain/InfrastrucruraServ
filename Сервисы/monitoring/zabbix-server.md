@@ -8,6 +8,7 @@ owner: "System Administrator"
 tags: [zabbix, monitoring, observability, postgresql, production, ubuntu-24.04]
 related: ["Инфраструктура/servers/pvd-1c.md", "Инфраструктура/servers/win-dckio4rlmnm.md", "Сервисы/mssql/server-2019.md"]
 ai_notes: "Zabbix single-server architecture on Proxmox VM. Monitors PVD-1C (1C) and PVD-SQL (MSSQL). Auto-collects configuration data for KB via scripts."
+order: 1
 ---
 
 # Zabbix 7.4: Production Monitoring System

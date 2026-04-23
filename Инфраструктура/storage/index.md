@@ -1,11 +1,12 @@
 ---
-title: "Хранилище и резервное копирование"
+title: "Хранилище и бэкапы"
 slug: "storage-index"
 status: "published"
 last_updated: "2026-04-23T00:00:00Z"
 updated_by: "AI-Maintainer"
 tags: [storage, backup, data-protection]
 related: ["Инфраструктура/storage/backup-policy.md"]
+order: 3
 ---
 
 # 💾 Хранилище и резервное копирование

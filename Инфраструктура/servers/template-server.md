@@ -3,6 +3,7 @@ title: "Server Template"
 slug: "template-server"
 status: "draft"
 description: "Template for documenting individual servers"
+order: 99
 ---
 
 # Server Configuration Template
